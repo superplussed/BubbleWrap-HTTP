@@ -37,7 +37,8 @@ module BubbleWrap; module HTTP; class Query
     @payload = options.delete(:payload)
     @encoding = options.delete(:encoding) || NSUTF8StringEncoding
     @files = options.delete(:files)
-    @boundary = options.delete(:boundary) || BubbleWrap::HTTP::Patch.create_uuid
+    # @boundary = options.delete(:boundary) || BubbleWrap::HTTP::Patch.create_uuid
+    @boundary = options.delete(:boundary) || BubbleWrap::HTTP::Patch.create_random
     @credentials = options.delete(:credentials) || {}
     @credentials = {:username => nil, :password => nil}.merge(@credentials)
     @timeout = options.delete(:timeout) || 30.0

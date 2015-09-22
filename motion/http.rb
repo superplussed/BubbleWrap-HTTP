@@ -52,6 +52,10 @@ module BubbleWrap
         false
       end
 
+      def create_random
+        (0...20).map { (65 + rand(26)).chr }.join
+      end
+
       def create_uuid
         uuid = UUID.new.generate
         CFUUIDCreateString(nil, uuid)
