@@ -6,7 +6,12 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    macaddr (1.7.1)
+      systemu (~> 2.6.2)
     rake (10.1.1)
+    systemu (2.6.5)
+    uuid (2.3.8)
+      macaddr (~> 1.0)
 
 PLATFORMS
   ruby
@@ -14,3 +19,7 @@ PLATFORMS
 DEPENDENCIES
   bubble-wrap-http!
   rake
+  uuid (~> 2.3.8)
+
+BUNDLED WITH
+   1.10.1

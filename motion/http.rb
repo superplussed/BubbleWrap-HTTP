@@ -53,7 +53,7 @@ module BubbleWrap
       end
 
       def create_uuid
-        uuid = CFUUIDCreate(nil)
+        uuid = UUID.new.generate
         CFUUIDCreateString(nil, uuid)
       end
 
@@ -72,7 +72,7 @@ module BubbleWrap
           raise ParserError, error[0].description if error[0]
           if block_given?
             yield obj
-          else 
+          else
             obj
           end
         end
